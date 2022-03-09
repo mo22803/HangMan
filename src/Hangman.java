@@ -8,8 +8,9 @@ public class Hangman extends GraphicsProgram {
 
     Stand stand = new Stand();
     Person head = new Person();
+    int badGuesses = 0;
 
-    String[] wordChoices = {"ooooooooooooe"};
+    String[] wordChoices = {"ooooooooooooeee","word","java","scritp"};
     String wordChoice;
 
     public void init(){
@@ -49,6 +50,8 @@ public class Hangman extends GraphicsProgram {
 
             } else {
               // they guessed wrong now what
+
+                head.guessedWrong(++badGuesses);
             }
 
 
